@@ -70,7 +70,7 @@ var UserMenu = Widget.extend({
                     })
                     .guardedCatch(function (result, ev){
                         ev.preventDefault();
-                        framework.redirect('https://accounts.modcom.ca/account');
+                        framework.redirect('https://modcom.ca');
                     });
             },
         });
@@ -79,7 +79,7 @@ var UserMenu = Widget.extend({
      * @private
      */
     _onMenuDocumentation: function () {
-        window.open('https://www.modcom.ca/documentation/14.0', '_blank');
+        window.open('https://www.modcom.ca', '_blank');
     },
     /**
      * @private
@@ -112,7 +112,7 @@ var UserMenu = Widget.extend({
      * @private
      */
     _onMenuSupport: function () {
-        window.open('https://www.modcom.ca/buy', '_blank');
+        window.open('https://www.modcom.ca', '_blank');
     },
     /**
      * @private
