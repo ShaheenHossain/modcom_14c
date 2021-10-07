@@ -72,7 +72,7 @@ var BoardController = FormController.extend({
 
     /**
      * @private
-     * @param {OdooEvent} event
+     * @param { ModComEvent} event
      */
     _onChangeLayout: function (event) {
         var self = this;

@@ -186,7 +186,7 @@ class ThreadedWSGIServerReloadable(LoggingBaseWSGIServerMixIn, werkzeug.serving.
     # TODO: Remove this method as soon as either of the revision
     # - python/cpython@8b1f52b5a93403acd7d112cd1c1bc716b31a418a for Python 3.6,
     # - python/cpython@908082451382b8b3ba09ebba638db660edbf5d8e for Python 3.7,
-    # is included in all Python 3 releases installed on all operating systems supported by Odoo.
+    # is included in all Python 3 releases installed on all operating systems supported by  ModCom.
     # These revisions are included in Python from releases 3.6.8 and Python 3.7.2 respectively.
     def _handle_request_noblock(self):
         """

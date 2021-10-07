@@ -1,10 +1,10 @@
-# Translation of Odoo Server.
+# Translation of  ModCom Server.
 # This file contains the translation of the following modules:
 # 	* mail
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version:  ModCom Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-27 11:23+0000\n"
 "PO-Revision-Date: 2020-11-27 11:23+0000\n"
@@ -937,7 +937,7 @@ msgstr ""
 #. openerp-web
 #: code:addons/mail/static/src/components/notification_request/notification_request.xml:0
 #, python-format
-msgid "Avatar of OdooBot"
+msgid "Avatar of  ModComBot"
 msgstr ""
 
 #. module: mail
@@ -2566,7 +2566,7 @@ msgstr ""
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__res_users__notification_type__inbox
-msgid "Handle in Odoo"
+msgid "Handle in  ModCom"
 msgstr ""
 
 #. module: mail
@@ -2816,7 +2816,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields,help:mail.field_res_config_settings__alias_domain
 msgid ""
-"If you have setup a catch-all email domain redirected to the Odoo server, "
+"If you have setup a catch-all email domain redirected to the  ModCom server, "
 "enter the domain name here."
 msgstr ""
 
@@ -4240,7 +4240,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mail.mail_notification_light
 #: model_terms:ir.ui.view,arch_db:mail.mail_notification_paynow
 #: model_terms:ir.ui.view,arch_db:mail.message_notification_email
-msgid "Odoo"
+msgid " ModCom"
 msgstr ""
 
 #. module: mail
@@ -4248,7 +4248,7 @@ msgstr ""
 #: code:addons/mail/static/src/components/notification_alert/notification_alert.xml:0
 #, python-format
 msgid ""
-"Odoo Push notifications have been blocked. Go to your browser settings to "
+" ModCom Push notifications have been blocked. Go to your browser settings to "
 "allow them."
 msgstr ""
 
@@ -4257,7 +4257,7 @@ msgstr ""
 #: code:addons/mail/static/src/components/notification_request/notification_request.js:0
 #, python-format
 msgid ""
-"Odoo will not have the permission to send native notifications on this "
+" ModCom will not have the permission to send native notifications on this "
 "device."
 msgstr ""
 
@@ -4683,7 +4683,7 @@ msgstr ""
 msgid ""
 "Policy on how to handle Chatter notifications:\n"
 "- Handle by Emails: notifications are sent to your email address\n"
-"- Handle in Odoo: notifications appear in your ModCom Inbox"
+"- Handle in  ModCom: notifications appear in your ModCom Inbox"
 msgstr ""
 
 #. module: mail
@@ -5804,7 +5804,7 @@ msgstr ""
 #: model:ir.model.fields,help:mail.field_mail_alias_mixin__alias_model_id
 #: model:ir.model.fields,help:mail.field_mail_channel__alias_model_id
 msgid ""
-"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
+"The model ( ModCom Document Kind) to which this alias corresponds. Any incoming"
 " email that does not reply to an existing record will cause the creation of "
 "a new record of this model (e.g. a Project Task)"
 msgstr ""

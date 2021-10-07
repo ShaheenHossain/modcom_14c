@@ -13,7 +13,7 @@ odoo.define('base_automation.BaseAutomatioErrorDialogTests', function (require) 
 
             let baseAutomationName = 'Test base automation error dialog';
             let error = {
-                type: 'Odoo Client Error',
+                type: ' ModCom Client Error',
                 message: 'Message',
                 data: {
                     debug: 'Traceback',
@@ -49,7 +49,7 @@ odoo.define('base_automation.BaseAutomatioErrorDialogTests', function (require) 
             assert.expect(3);
 
             let error = {
-                type: 'Odoo Client Error',
+                type: ' ModCom Client Error',
                 message: 'Message',
                 data: {
                     debug: 'Traceback',

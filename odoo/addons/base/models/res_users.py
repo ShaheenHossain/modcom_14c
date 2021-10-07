@@ -606,7 +606,7 @@ class Users(models.Model):
 
     def unlink(self):
         if SUPERUSER_ID in self.ids:
-            raise UserError(_('You can not remove the admin user as it is used internally for resources created by Odoo (updates, module installation, ...)'))
+            raise UserError(_('You can not remove the admin user as it is used internally for resources created by  ModCom (updates, module installation, ...)'))
         self.clear_caches()
         return super(Users, self).unlink()
 
@@ -947,7 +947,7 @@ class Users(models.Model):
                     "The rate-limited IP address %s is classified as private "
                     "and *might* be a proxy. If your ModCom is behind a proxy, "
                     "it may be mis-configured. Check that you are running "
-                    "Odoo in Proxy Mode and that the proxy is properly configured, see "
+                    " ModCom in Proxy Mode and that the proxy is properly configured, see "
                     "https://www.modcom.ca/documentation/14.0/administration/deployment/deploy.html#https for details.",
                     source
                 )

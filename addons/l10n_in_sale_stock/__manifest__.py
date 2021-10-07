@@ -14,7 +14,7 @@
         useful when you setup the multiple GSTIN units.
     """,
 
-    'author': "Odoo",
+    'author': " ModCom",
     'website': "https://www.modcom.ca",
     'category': 'Accounting/Localizations/Sale',
     'version': '0.1',

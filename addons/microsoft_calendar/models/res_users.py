@@ -82,11 +82,11 @@ class User(models.Model):
                 full_sync = True
         self.microsoft_calendar_sync_token = next_sync_token
 
-        # Microsoft -> Odoo
+        # Microsoft ->  ModCom
         recurrences = events.filter(lambda e: e.is_recurrent())
         synced_events, synced_recurrences = self.env['calendar.event']._sync_microsoft2odoo(events, default_reminders=default_reminders) if events else (self.env['calendar.event'], self.env['calendar.recurrence'])
 
-        # Odoo -> Microsoft
+        #  ModCom -> Microsoft
         recurrences = self.env['calendar.recurrence']._get_microsoft_records_to_sync(full_sync=full_sync)
         recurrences -= synced_recurrences
         recurrences._sync_odoo2microsoft(calendar_service)

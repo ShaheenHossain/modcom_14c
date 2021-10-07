@@ -102,7 +102,7 @@ odoo.define('partner_autocomplete.tests', function (require) {
                 state_id: false,
                 partner_gid: 1,
                 website: "modcom.ca",
-                comment: "Comment on Odoo",
+                comment: "Comment on  ModCom",
                 street: "40 Chaussée de Namur",
                 city: "Ramillies",
                 zip: "1367",

@@ -23,9 +23,9 @@ MAX_RECURRENT_EVENT = 720
 
 
 # API requests are sent to Microsoft Calendar after the current transaction ends.
-# This ensures changes are sent to Microsoft only if they really happened in the Odoo database.
+# This ensures changes are sent to Microsoft only if they really happened in the  ModCom database.
 # It is particularly important for event creation , otherwise the event might be created
-# twice in Microsoft if the first creation crashed in Odoo.
+# twice in Microsoft if the first creation crashed in  ModCom.
 def after_commit(func):
     @wraps(func)
     def wrapped(self, *args, **kwargs):
@@ -242,7 +242,7 @@ class MicrosoftSync(models.AbstractModel):
 
     @api.model
     def _sync_microsoft2odoo(self, microsoft_events: MicrosoftEvent, default_reminders=()):
-        """Synchronize Microsoft recurrences in Odoo. Creates new recurrences, updates
+        """Synchronize Microsoft recurrences in  ModCom. Creates new recurrences, updates
         existing ones.
 
         :return: synchronized odoo
@@ -322,7 +322,7 @@ class MicrosoftSync(models.AbstractModel):
                 })
 
     def _get_microsoft_records_to_sync(self, full_sync=False):
-        """Return records that should be synced from Odoo to Microsoft
+        """Return records that should be synced from  ModCom to Microsoft
 
         :param full_sync: If True, all events attended by the user are returned
         :return: events
@@ -370,7 +370,7 @@ class MicrosoftSync(models.AbstractModel):
     def _notify_attendees(self):
         """ Notify calendar event partners.
         This is called when creating new calendar events in _sync_microsoft2odoo.
-        At the initialization of a synced calendar, Odoo requests all events for a specific
+        At the initialization of a synced calendar,  ModCom requests all events for a specific
         MicrosoftCalendar. Among those there will probably be lots of events that will never triggers a notification
         (e.g. single events that occured in the past). Processing all these events through the notification procedure
         of calendar.event.create is a possible performance bottleneck. This method aimed at alleviating that.

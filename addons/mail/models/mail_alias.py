@@ -24,7 +24,7 @@ class Alias(models.Model):
 
        This is meant to be used in combination with a catch-all email configuration
        on the company's mail server, so that as soon as a new mail.alias is
-       created, it becomes immediately usable and Odoo will accept email for it.
+       created, it becomes immediately usable and  ModCom will accept email for it.
      """
     _name = 'mail.alias'
     _description = "Email Aliases"
@@ -36,7 +36,7 @@ class Alias(models.Model):
 
     alias_name = fields.Char('Alias Name', copy=False, help="The name of the email alias, e.g. 'jobs' if you want to catch emails for <jobs@example.modcom.ca>")
     alias_model_id = fields.Many2one('ir.model', 'Aliased Model', required=True, ondelete="cascade",
-                                     help="The model (Odoo Document Kind) to which this alias "
+                                     help="The model ( ModCom Document Kind) to which this alias "
                                           "corresponds. Any incoming email that does not reply to an "
                                           "existing record will cause the creation of a new record "
                                           "of this model (e.g. a Project Task)",

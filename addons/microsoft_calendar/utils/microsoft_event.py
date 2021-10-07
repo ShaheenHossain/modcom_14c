@@ -7,7 +7,7 @@ from collections import abc
 
 class MicrosoftEvent(abc.Set):
     """This helper class holds the values of a Microsoft event.
-    Inspired by Odoo recordset, one instance can be a single Microsoft event or a
+    Inspired by  ModCom recordset, one instance can be a single Microsoft event or a
     (immutable) set of Microsoft events.
     All usual set operations are supported (union, intersection, etc).
 

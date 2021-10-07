@@ -48,7 +48,7 @@ def _get_wkhtmltopdf_bin():
     return find_in_path('wkhtmltopdf')
 
 
-# Check the presence of Wkhtmltopdf and return its version at Odoo start-up
+# Check the presence of Wkhtmltopdf and return its version at  ModCom start-up
 wkhtmltopdf_state = 'install'
 wkhtmltopdf_dpi_zoom_ratio = False
 try:
@@ -72,7 +72,7 @@ else:
             wkhtmltopdf_dpi_zoom_ratio = True
 
         if config['workers'] == 1:
-            _logger.info('You need to start Odoo with at least two workers to print a pdf version of the reports.')
+            _logger.info('You need to start  ModCom with at least two workers to print a pdf version of the reports.')
             wkhtmltopdf_state = 'workers'
     else:
         _logger.info('Wkhtmltopdf seems to be broken.')
@@ -707,7 +707,7 @@ class IrActionsReport(models.Model):
         if unreadable_pdfs:
             records = [stream_record[s].name for s in unreadable_pdfs if s in stream_record]
             raise UserError(_(
-                "Odoo is unable to merge the PDFs attached to the following records:\n"
+                " ModCom is unable to merge the PDFs attached to the following records:\n"
                 "%s\n\n"
                 "Please exclude them from the selection to continue. It's possible to "
                 "still retrieve those PDFs by selecting each of the affected records "

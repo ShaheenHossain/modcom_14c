@@ -247,7 +247,7 @@ class Docker():
         run_cmd(["docker", "stop", self.container_name]).check_returncode()
 
     def test_odoo(self):
-        logging.info('Starting to test Odoo install test')
+        logging.info('Starting to test  ModCom install test')
         start_time = time.time()
         while self.is_running() and (time.time() - start_time) < INSTALL_TIMEOUT:
             time.sleep(5)
@@ -259,8 +259,8 @@ class Docker():
                 return
         if self.is_running():
             self.stop()
-            raise OdooTestTimeoutError('Odoo pid file never appeared after %s sec' % INSTALL_TIMEOUT)
-        raise OdooTestError('Error while installing/starting Odoo after %s sec.\nSee testlogs.txt in build dir' % int(time.time() - start_time))
+            raise OdooTestTimeoutError(' ModCom pid file never appeared after %s sec' % INSTALL_TIMEOUT)
+        raise OdooTestError('Error while installing/starting  ModCom after %s sec.\nSee testlogs.txt in build dir' % int(time.time() - start_time))
 
     def build(self):
         """To be overriden by specific builder"""
@@ -460,7 +460,7 @@ class KVMWinBuildExe(KVM):
         remote_build_dir = '/cygdrive/c/odoobuild/server/'
 
         self.ssh("mkdir -p build")
-        logging.info("Syncing Odoo files to virtual machine...")
+        logging.info("Syncing  ModCom files to virtual machine...")
         self.rsync(['%s/' % self.args.build_dir, '%s@127.0.0.1:%s' % (self.login, remote_build_dir)])
         self.ssh("cd {}setup/win32;time make allinone;".format(remote_build_dir))
         self.rsync(['%s@127.0.0.1:%ssetup/win32/release/' % (self.login, remote_build_dir), '%s/' % self.args.build_dir])
